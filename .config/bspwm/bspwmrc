@@ -2,9 +2,7 @@
 
 panel &
 
-
 bspc monitor DP-2 -d I II III IV V VI
-
 
 bspc config border_width                    0
 bspc config window_gap                      15
