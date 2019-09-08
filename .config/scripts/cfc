@@ -1,0 +1,7 @@
+#!/bin/sh
+
+FILE=$(eval echo "$(cat .bmscript | grep $(cat .bmscript | awk '{ print $1}' | fzf --reverse) | awk '{print $2}')")
+
+if test -f $FILE; then
+    vim $FILE
+fi

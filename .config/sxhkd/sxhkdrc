@@ -1,0 +1,44 @@
+
+super + Return
+    $TERMINAL
+
+super + shift + Return
+    dmenu_run
+
+super + w
+    $BROWSER
+
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# close and kill
+super + {_,shift + }c
+	bspc node -{c,k}
+
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+
+super + {_, shift} + Tab
+    bspc node --focus {prev,next}
+
+super + {_, shift} + {h,j,k,l}
+    bspc node --{focus,swap} {west,south,north,east}
+
+
+
+## SPECIAL KEYS
+XF86Audio{Raise,Lower}Volume
+    pulsemixer --change-volume {+10,-10}
+
+XF86AudioMute
+    pulsemixer --toggle-mute
+
+XF86MonBrightness{Up,Down}
+    xbacklight {-inc,-dec} 10
+
+XF86Bluetooth
+    blueman-manager
+
+XF86Calculator
+    $TERMINAL -e $CALCULATOR
