@@ -21,6 +21,7 @@ call plug#end()
 
 
 " Colorscheme
+
 colorscheme wal
 
 
