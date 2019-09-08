@@ -32,6 +32,8 @@ super + control + {h,j,k,l}
     {D1=west;D2=east;INC=-10;,D1=south;D2=north;INC=+10;,D1=north;D2=south;INC=-10;,D1=east;D2=west;INC=+10;} \
     bspc node @$D1 -r $INC || bspc node @$D2 -r $INC
 
+super + b
+    bspc node @/ --balance
 
 ## SPECIAL KEYS
 XF86Audio{Raise,Lower}Volume
