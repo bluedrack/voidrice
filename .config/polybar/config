@@ -40,7 +40,7 @@ modules-right = battery date
 
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
-separator = " • "
+separator = "•"
 
 [module/xwindow]
 type = internal/xwindow
@@ -68,12 +68,12 @@ label-empty-padding = 1
 type = custom/script
 
 exec = date +"%a %d %b • %H:%M"
-
+label-padding = 1
 interval = 60
 
 [module/battery]
 type = custom/script
-
+label-padding = 1
 exec = echo "Bat." $(acpi| tr -s ", " "\n" | sed -n 4p)
 click-left = notify-send "Remaining:" "$(acpi)"
 

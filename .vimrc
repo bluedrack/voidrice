@@ -4,7 +4,6 @@ set relativenumber
 set number
 syntax on
 set tabstop=4
-set shiftwidth=4
 set expandtab
 
 " Plugins
@@ -25,6 +24,10 @@ call plug#end()
 colorscheme wal
 
 
-" Shortcut
+" Autocmd
 
 autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
+autocmd BufWritePost *polybar/config !pkill -USR1 polybar
+
+
+" Shortcuts

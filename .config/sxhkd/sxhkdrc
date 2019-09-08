@@ -8,9 +8,9 @@ super + shift + Return
 super + w
     $BROWSER
 
-super + Escape
-	pkill -USR1 -x sxhkd
-
+super + n
+    $TERMINAL -e createnote
+## NODE GESTION
 # close and kill
 super + {_,shift + }c
 	bspc node -{c,k}
@@ -25,6 +25,12 @@ super + {_, shift} + Tab
 super + {_, shift} + {h,j,k,l}
     bspc node --{focus,swap} {west,south,north,east}
 
+super + {_, shift} + f
+    bspc node -t \~{fullscreen,floating}
+
+super + control + {h,j,k,l}
+    {D1=west;D2=east;INC=-10;,D1=south;D2=north;INC=+10;,D1=north;D2=south;INC=-10;,D1=east;D2=west;INC=+10;} \
+    bspc node @$D1 -r $INC || bspc node @$D2 -r $INC
 
 
 ## SPECIAL KEYS
