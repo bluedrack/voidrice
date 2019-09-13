@@ -79,12 +79,11 @@ use-ui-max = true
 ; Interval for volume increase/decrease (in percent points)
 ; Default: 5
 interval = 5
-padding = 1
 
 label-muted = mute
-
+label-volume = vol. %percentage%
 format-volume = <label-volume>
-
+label-muted-padding = 1
 format-volume-padding = 1
 ; [module/date]
 ; type = internal/date
