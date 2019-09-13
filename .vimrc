@@ -16,6 +16,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdtree'
     Plug 'ntpeters/vim-better-whitespace'
     Plug 'junegunn/goyo.vim'
+    Plug 'rhysd/vim-grammarous'
 call plug#end()
 
 

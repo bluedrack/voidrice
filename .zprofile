@@ -1,4 +1,4 @@
-export PATH=$PATH:$HOME/.config/scripts/
+export PATH=$PATH:$HOME/.config/scripts/:$HOME/.local/bin/
 
 export XDG_CONFIG_HOME="$HOME/.config"
 

@@ -26,7 +26,7 @@ font-0 = monospace:pixelsize=14;0
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = battery date
+modules-right = pulseaudio battery date
 separator = "•"
 
 [module/xwindow]
@@ -61,14 +61,34 @@ interval = 60
 [module/battery]
 type = custom/script
 label-padding = 1
-exec = echo "Bat." $(acpi| tr -s ", " "\n" | sed -n 4p)
+exec = echo "bat." $(acpi| tr -s ", " "\n" | sed -n 4p)
 click-left = notify-send "Remaining:" "$(acpi)"
-
 interval = 60
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = true
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
+padding = 1
+
+label-muted = mute
+
+format-volume = <label-volume>
+
+format-volume-padding = 1
 ; [module/date]
 ; type = internal/date
 ; interval = 60
-
 
 ; time = %a %b %d | %H:%M
 

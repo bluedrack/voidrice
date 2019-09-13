@@ -10,6 +10,7 @@ super + w
 
 super + n
     $TERMINAL -e createnote
+
 ## NODE GESTION
 # close and kill
 super + {_,shift + }c
@@ -33,7 +34,7 @@ super + control + {h,j,k,l}
     bspc node @$D1 -r $INC || bspc node @$D2 -r $INC
 
 super + b
-    bspc node @/ --balance
+    bspc node \@ --balance
 
 ## SPECIAL KEYS
 XF86Audio{Raise,Lower}Volume
