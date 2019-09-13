@@ -1,0 +1,9 @@
+polybar         $HOME/.config/polybar/config
+i3              $HOME/.config/i3/config
+vim             $HOME/.vimrc
+zsh             $HOME/.zshrc
+zprofile        $HOME/.zprofile
+sxhkd           $HOME/.config/sxhkd/sxhkdrc
+bspwm           $HOME/.config/bspwm/bspwmrc
+dunst           $HOME/.config/wal/templates/dunstrc
+xinit           $HOME/.xinitrc
