@@ -6,6 +6,6 @@ if test ! -z  $CHOICE ; then
 	FILE=~/$(cat $BM | grep "$CHOICE" | awk '{print $2}')
 	vim $FILE
 fi
-# if test -f $FILE; then
-#     vim $FILE
-# fi
+
+
+
