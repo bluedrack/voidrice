@@ -4,7 +4,6 @@ set relativenumber
 set number
 syntax on
 set tabstop=4
-set expandtab
 
 " Plugins
 call plug#begin('~/.vim/plugged')
@@ -30,6 +29,5 @@ colorscheme wal
 
 autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
 autocmd BufWritePost *polybar/config !pkill -USR1 polybar
-
 
 " Shortcuts
