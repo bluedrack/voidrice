@@ -21,12 +21,14 @@ call plug#begin('~/.vim/plugged')
 	" Plug 'ntpeters/vim-better-whitespace'
 	Plug 'junegunn/goyo.vim'
 	Plug 'rhysd/vim-grammarous'
-	" Plug 'tpope/vim-sensible'
+	Plug 'tpope/vim-sensible'
 call plug#end()
 
 " Colorscheme
 
 colorscheme wal
+hi StatusLine ctermbg=none cterm=bold
+
 
 " Sensible plugin
 set scrolloff=10
