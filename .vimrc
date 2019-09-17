@@ -3,8 +3,11 @@ set nocompatible
 set relativenumber
 set number
 syntax on
+filetype plugin on
+set shiftwidth=4
+set expandtab
+set softtabstop=0 noexpandtab
 set tabstop=4
-
 " Plugins
 call plug#begin('~/.vim/plugged')
     Plug 'dylanaraps/wal.vim'

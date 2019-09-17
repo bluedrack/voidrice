@@ -1,7 +1,11 @@
 #!/bin/sh
 
-FILE=$(eval echo "$(cat .bmscript | grep $(cat .bmscript | awk '{ print $1}' | fzf --reverse) | awk '{print $2}')")
-
-if test -f $FILE; then
-    vim $FILE
+BM=".bmscript"
+CHOICE="$(cat $BM | awk '{ print $1}' | fzf --reverse)"
+if test ! -z  $CHOICE ; then
+	FILE=~/$(cat $BM | grep "$CHOICE" | awk '{print $2}')
+	vim $FILE
 fi
+# if test -f $FILE; then
+#     vim $FILE
+# fi

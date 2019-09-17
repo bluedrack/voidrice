@@ -37,6 +37,7 @@ super + b
     bspc node \@ --balance
 
 ## SPECIAL KEYS
+
 XF86Audio{Raise,Lower}Volume
     pulsemixer --change-volume {+10,-10}
 
